@@ -1,26 +1,35 @@
 #include <stdio.h>
+
 /**
- * main - main block
- * Description: computes and prints the sum of all the multiples of 3 or
- * 5 below 1024 (excluded), followed by a new line
- * Return: 0
+ * main - prints fibonnaci numbers
+ *
+ * Description: prints from 1 to 98
+ * Return: Always(0) Success
  */
+
 int main(void)
 {
-	int i = 0;
-	unsigned long int a = 0, b = 1, next = 0;
+  int num1, num2, i, n;
+  int next_num;
 
-	while (i < 98)
-	{
-		next = a + b;
-		a = b;
-		b = next;
-		printf("%lu", next);
+  n = 98;
 
-		if (i < 97)
-			printf(", ");
-		i++;
-	}
-	putchar('\n');
-	return (0);
+  for (i = 1; i <= n; i++)
+  {
+      if (i == 98)
+      {
+	  printf("%d, ", num2);
+      }
+      else
+      {
+	  printf("%d, ", num2);
+	  next_num = num1 + num2;
+	  num1 = num2;
+	  num2 = next_num;
+      }
+  }
+  printf("\n");
+
+  return (0);
 }
+
