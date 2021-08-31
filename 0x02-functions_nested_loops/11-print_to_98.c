@@ -1,90 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_to_98 - prints numbers to 98
- * @n: first parameter
- *
- * Description: prints all num to 98
- * Return: Always (0).
+ * print_to_98 - print to 98
+ * @n : number to start from
+ * Return:0 or 1
  */
 
 void print_to_98(int n)
 {
-	int end;
 
-	end = 98;
+  while (n < 98)
+    {
+      printf("%i, ", n);
+      n++;
+    }
+  while (n > 98)
+    {
+      printf("%i, ", n);
+      n--;
+    }
 
-	if (n < end)
-	{
-		for (; n <= end; n++)
-		{
-			if (n == 98)
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				break;
-			}
-			else
-			{
-				if (n >= -9 && n <= 9)
-				{
-					if (n < 0)
-					{
-						_putchar('-');
-						_putchar((n * -1) + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
-					else if (n >= 0)
-					{
-						_putchar(n + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
-				}
-				else if (n >= 100)
-				{
-					_putchar((n / 100) + '0');
-					_putchar((n / 10) + '0');
-					_putchar((n % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar((n / 10) + '0');
-					_putchar((n % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
-		}
-		_putchar('\n');
-	}
-	else if (n == 0)
-	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
-		_putchar('\n');
-	}
-	else
-	{
-		for (; n >= end; n--)
-		{
-			if (n == 98)
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				break;
-			}
-			else
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
-		_putchar('\n');
-	}
-	return;
+  printf("98");
+  putchar('\n');
 }
