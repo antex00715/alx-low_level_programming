@@ -11,7 +11,6 @@ int main(void)
 {
 	int num1, num2, i, n;
 	int next_num;
-	
 	n = 98;
 	for (i = 1; i <= n; i++)
 	{
